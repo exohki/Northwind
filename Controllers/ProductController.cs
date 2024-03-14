@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Northwind.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Northwind.Controllers
 {
@@ -24,6 +25,22 @@ namespace Northwind.Controllers
             var products = _context.Products.ToList();
             return View(products);
         }
+        public IActionResult Index()
+        {
+            var products = _context.Products
+                .Include(p => p.Category)
+                .Select(p => new ProductViewModel
+                {
+                    ProductName = p.ProductName,
+                    UnitPrice = p.UnitPrice,
+                    UnitsInStock = p.UnitsInStock,
+                    CategoryName = p.Category.CategoryName
+                })
+                .ToList();
+
+            return View(products);
+        }
+
     }
 }
 

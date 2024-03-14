@@ -130,3 +130,4 @@
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.genruntimeconfig.cache
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/ref/Northwind.dll
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/bin/Debug/net8.0/appsettings.json
+/Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.sourcelink.json
