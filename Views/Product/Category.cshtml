@@ -1,0 +1,11 @@
+<!-- Views/Product/Category.cshtml -->
+@model List<Category>
+
+<h1>Product Categories</h1>
+
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@category.CategoryName</li>
+    }
+</ul>
