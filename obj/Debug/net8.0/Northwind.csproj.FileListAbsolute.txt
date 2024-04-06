@@ -24,6 +24,7 @@
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind Assignment/obj/Debug/net8.0/Northwind.csproj.AssemblyReference.cache
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind Assignment/obj/Debug/net8.0/Northwind.RazorAssemblyInfo.cache
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind Assignment/obj/Debug/net8.0/Northwind.RazorAssemblyInfo.cs
+/Users/emileemontijo/Documents/School/Net Web Development/Northwind/bin/Debug/net8.0/appsettings.json
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/bin/Debug/net8.0/Northwind.staticwebassets.runtime.json
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/bin/Debug/net8.0/Northwind
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/bin/Debug/net8.0/Northwind.deps.json
@@ -142,6 +143,7 @@
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.MvcApplicationPartsAssemblyInfo.cache
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.RazorAssemblyInfo.cache
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.RazorAssemblyInfo.cs
+/Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.sourcelink.json
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/staticwebassets.build.json
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/staticwebassets.development.json
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/staticwebassets/msbuild.Northwind.Microsoft.AspNetCore.StaticWebAssets.props
@@ -156,4 +158,3 @@
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.pdb
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/Northwind.genruntimeconfig.cache
 /Users/emileemontijo/Documents/School/Net Web Development/Northwind/obj/Debug/net8.0/ref/Northwind.dll
-/Users/emileemontijo/Documents/School/Net Web Development/Northwind/bin/Debug/net8.0/appsettings.json

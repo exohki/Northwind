@@ -1,18 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Northwind.Models; 
 
+using Microsoft.AspNetCore.Mvc;
 public class ProductController : Controller
 {
-    private readonly DataContext _context;
-
-    public ProductController(DataContext context)
-    {
-        _context = context;
-    }
-
-    public ViewResult Category()
-    {
-        var categories = _context.Categories.ToList();
-        return View(categories);
-    }
+  // this controller depends on the NorthwindRepository
+  private DataContext _dataContext;
+  public ProductController(DataContext db) => _dataContext = db;
+  public IActionResult Category() => View(_dataContext.Categories.OrderBy(c => c.CategoryName));
+  public IActionResult Index(int id) => View(_dataContext.Products.Where(p => p.CategoryId == id && p.Discontinued == false).OrderBy(p => p.ProductName));
 }
