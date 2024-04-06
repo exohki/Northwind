@@ -10,7 +10,7 @@ public class ProductController : Controller
         _context = context;
     }
 
-    public IActionResult Category()
+    public ViewResult Category()
     {
         var categories = _context.Categories.ToList();
         return View(categories);
