@@ -1,26 +1,27 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-namespace Northwind.Models;
+using Microsoft.Extensions.Configuration;
 
-
-public class DataContext : DbContext
+namespace Northwind.Models
 {
-  private readonly IConfiguration _configuration;
-
-  public DataContext(DbContextOptions<DataContext> options, IConfiguration configuration) : base(options)
-  {
-    _configuration = configuration;
-  }
-
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    if (!optionsBuilder.IsConfigured)
+    public class DataContext : DbContext
     {
-      optionsBuilder.UseSqlServer(_configuration.GetConnectionString("Data:Northwind:ConnectionString"));
-    }
-  }
+        private readonly IConfiguration _configuration;
 
-  public DbSet<Product> Products { get; set; }
-  public DbSet<Category> Categories { get; set; }
-  public DbSet<Discount> Discounts { get; set; }
+        public DataContext(DbContextOptions<DataContext> options, IConfiguration configuration) : base(options)
+        {
+            _configuration = configuration;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(_configuration.GetConnectionString("Northwind"));
+            }
+        }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
+    }
 }

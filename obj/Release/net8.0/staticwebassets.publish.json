@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y9QspfrU3p41hutrSYvoqZATBEXCqAOs8p1MtwmGnfc=",
+  "Hash": "4qoSZsGPaZYQTkfWZ11EViXz5XOSVWNm3ORFpUvTn5A=",
   "Source": "Northwind",
   "BasePath": "_content/Northwind",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/client.css"
+    },
+    {
+      "Identity": "/Users/emileemontijo/Documents/School/Net Web Development/Northwind/wwwroot/discount.js",
+      "SourceId": "Northwind",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/emileemontijo/Documents/School/Net Web Development/Northwind/wwwroot/",
+      "BasePath": "_content/Northwind",
+      "RelativePath": "discount.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/discount.js"
     }
   ]
 }

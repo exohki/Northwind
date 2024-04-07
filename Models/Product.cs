@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+namespace Northwind.Models;
 
 
 public class Product

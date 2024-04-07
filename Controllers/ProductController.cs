@@ -1,12 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
-using Northwind.Models; 
+using Microsoft.EntityFrameworkCore;
+using Northwind.Models;
+using System.Linq;
 
-using Microsoft.AspNetCore.Mvc;
-public class ProductController : Controller
+namespace Northwind.Controllers
 {
-  // this controller depends on the NorthwindRepository
-  private DataContext _dataContext;
-  public ProductController(DataContext db) => _dataContext = db;
-  public IActionResult Category() => View(_dataContext.Categories.OrderBy(c => c.CategoryName));
-  public IActionResult Index(int id) => View(_dataContext.Products.Where(p => p.CategoryId == id && p.Discontinued == false).OrderBy(p => p.ProductName));
+    public class ProductController : Controller
+    {
+        private readonly DataContext _dataContext;
+
+        public ProductController(DataContext db)
+        {
+            _dataContext = db;
+        }
+
+        public IActionResult Category()
+        {
+            var categories = _dataContext.Categories.OrderBy(c => c.CategoryName).ToList();
+            return View(categories);
+        }
+
+        public IActionResult Index(int id)
+        {
+            var products = _dataContext.Products.Where(p => p.CategoryId == id && !p.Discontinued).OrderBy(p => p.ProductName).ToList();
+            return View(products);
+        }
+    }
 }

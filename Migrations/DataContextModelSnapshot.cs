@@ -22,7 +22,7 @@ namespace Northwind.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Category", b =>
+            modelBuilder.Entity("Northwind.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
@@ -41,7 +41,7 @@ namespace Northwind.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Discount", b =>
+            modelBuilder.Entity("Northwind.Models.Discount", b =>
                 {
                     b.Property<int>("DiscountId")
                         .ValueGeneratedOnAdd()
@@ -77,7 +77,7 @@ namespace Northwind.Migrations
                     b.ToTable("Discounts");
                 });
 
-            modelBuilder.Entity("Product", b =>
+            modelBuilder.Entity("Northwind.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
@@ -116,9 +116,9 @@ namespace Northwind.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Discount", b =>
+            modelBuilder.Entity("Northwind.Models.Discount", b =>
                 {
-                    b.HasOne("Product", "Product")
+                    b.HasOne("Northwind.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -127,9 +127,9 @@ namespace Northwind.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Product", b =>
+            modelBuilder.Entity("Northwind.Models.Product", b =>
                 {
-                    b.HasOne("Category", "Category")
+                    b.HasOne("Northwind.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -138,7 +138,7 @@ namespace Northwind.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Category", b =>
+            modelBuilder.Entity("Northwind.Models.Category", b =>
                 {
                     b.Navigation("Products");
                 });

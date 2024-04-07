@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/client.css"
     },
     {
+      "Id": "/Users/emileemontijo/Documents/School/Net Web Development/Northwind/wwwroot/discount.js",
+      "PackagePath": "staticwebassets/discount.js"
+    },
+    {
       "Id": "obj/Release/net8.0/staticwebassets/msbuild.Northwind.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
