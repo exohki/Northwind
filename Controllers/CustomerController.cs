@@ -5,37 +5,28 @@ using System;
 using System.Linq;
 
 namespace Northwind.Controllers;
-public class CustomerController : Controller
+
+public class CustomerController(DataContext db) : Controller
 {
-    private readonly DataContext _dataContext;
+    private readonly DataContext _dataContext = db;
 
-    public CustomerController(DataContext dataContext)
-    {
-        _dataContext = dataContext;
-    }
-
-    public IActionResult Register()
-    {
-        return View();
-    }
-
+  public IActionResult Register() => View();
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public IActionResult Register(Customer customer)
     {
-        if (ModelState.IsValid)
+      if (ModelState.IsValid)
+      {
+       if (_dataContext.Customers.Any(c => c.CompanyName == customer.CompanyName))
         {
-            // Check for unique company name
-            if (_dataContext.Customers.Any(c => c.CompanyName == customer.CompanyName))
-            {
-                ModelState.AddModelError("CompanyName", "Company name must be unique");
-                return View(customer);
-            }
-
-            _dataContext.Customers.Add(customer);
-            _dataContext.SaveChanges();
-            return RedirectToAction("Index", "Customer");
+          ModelState.AddModelError("", "Company Name must be unique");
         }
-
-        return View(customer);
+        else
+        {
+          _dataContext.AddCustomer(customer);
+          return RedirectToAction("Index", "Home");
+        }
+      }
+      return View();
     }
 }
